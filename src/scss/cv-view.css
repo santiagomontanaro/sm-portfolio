@@ -579,4 +579,10 @@ body.scale-cv {
 .scale-cv .interests__container {
   -moz-column-gap: 2.5rem;
        column-gap: 2.5rem;
+}
+
+@media (max-width: 900px) {
+  .fa-download {
+    display: none;
+  }
 }/*# sourceMappingURL=cv-view.css.map */

@@ -590,3 +590,9 @@ body.scale-cv {
 .scale-cv .interests__container {
   column-gap: 2.5rem;
 }
+
+@media (max-width: 900px) {
+  .fa-download {
+    display: none;
+  }
+}

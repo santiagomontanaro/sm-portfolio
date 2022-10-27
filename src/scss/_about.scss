@@ -1,0 +1,100 @@
+@mixin flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin mark {
+  background-color: #ddda237e;
+  font-weight: 400;
+  color: #212121;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+  background-color: #F1F1F1;
+  color: #212121;
+
+  .main {
+    padding: 1em;
+    font-size: 18px;
+    white-space: pre-line;
+    line-height: 1.6;
+    position: relative;
+    text-align: justify;
+    z-index: 10;
+  }
+
+  .greet {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  mark {
+    @include mark;
+  }
+
+  .svg-socials {
+    background-image: url('../img/socials.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    bottom: 50px;
+    left: 190px;
+    z-index: 1;
+    opacity: 0.4;
+  }
+
+  .henry {
+    text-decoration: none;
+    color: #ffff01;
+    background-color: #212121d8;
+  }
+}
+
+/* about desk media query */
+@media (min-width: 768px) {
+  .about {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #F1F1F1;
+    min-height: 120vh;
+
+    .main {
+      width: 800px;
+      font-size: 22px;
+    }
+
+    .greet {
+      font-size: 2rem;
+    }
+
+    .svg-socials {
+      width: 1000px;
+      height: 800px;
+      bottom: 160px;
+      left: -260px;
+    }
+
+    .svg-data {
+      background-image: url('../img/data-svg.svg');
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      width: 1000px;
+      height: 800px;
+      position: absolute;
+      bottom: 250px;
+      left: 1160px;
+      z-index: 1;
+      opacity: 0.4;
+    }
+  }
+}

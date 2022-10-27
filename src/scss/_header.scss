@@ -1,0 +1,108 @@
+$heightCalc: 100vh;
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: $heightCalc;
+  text-align: center;
+
+  .back-pic {
+    background-image: url('https://i.ibb.co/K68d27w/profile-pic.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    opacity: .5;
+    height: $heightCalc;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 1em;
+
+    h1 {
+      font-size: 3em;
+      font-weight: 800;
+      color: #F1F1F1;
+    }
+
+    h2 {
+      font-size: 2em;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+
+    h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: #FFFFFF;
+    }
+  }
+
+  .header-svg {
+    background-image: url('../img/web-dev-svg.svg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    width: 100%;
+    height: 200px;
+  }
+
+  .line-1 {
+    position: relative;
+    margin: 0 auto;
+    border-right: 2px solid #c1c1c1;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  /* Animacion */
+  .anim-typewriter {
+    animation: typewriter 2s steps(38, end) 1s 1 normal both,
+      blinkTextCursor 500ms steps(45, end) infinite normal;
+  }
+
+  @keyframes typewriter {
+    from {
+      width: 0;
+    }
+
+    to {
+      width: 11em;
+    }
+  }
+
+  @keyframes blinkTextCursor {
+    from {
+      border-right-color: #c1c1c1;
+    }
+
+    to {
+      border-right-color: transparent;
+    }
+  }
+}
+
+/* desk styles media query */
+@media (min-width: 970px) {
+  .header {
+    .back-pic {
+      width: 100%;
+      background-position: 50% 10%;
+    }
+
+    .header-svg {
+      max-width: 600px;
+      height: 250px;
+      margin: 0 auto;
+      position: relative;
+      bottom: 0;
+    }
+  }
+}

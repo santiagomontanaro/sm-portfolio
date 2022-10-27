@@ -1,0 +1,158 @@
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1em;
+  gap: 2em;
+
+  .portfolio__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1em;
+
+    h2 {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .info__text {
+      font-weight: 500;
+      line-height: 1.5;
+    }
+
+    .info__btn {
+      background-color: transparent;
+      border: 1px solid #f1f1f1;
+      border-radius: 6px;
+      padding: .6em;
+      color: #f1f1f1;
+      text-decoration: none;
+      font-size: 1.15rem;
+
+      &:hover {
+        background-color: #f1f1f1;
+        color: #000;
+      }
+    }
+
+    .info__btn:active {
+      background-color: #f1f1f1;
+      color: #000;
+    }
+  }
+
+  .portfolio__projects {
+    /* mobile grid */
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
+
+
+    .card {
+      background-color: #f1f1f1;
+      border-radius: 8px;
+      padding: 1.2em;
+
+      .img {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 200px;
+        width: 100%;
+        border-radius: 8px;
+        transition: all .2s ease-in-out;
+        border: 1px solid #212121;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      .gfact {
+        background-image: url('https://i.ibb.co/9ydYyq3/g-facts-app.jpg');
+      }
+
+      .rnm {
+        background-image: url('https://i.ibb.co/WgQT1VM/r-n-m-api.jpg');
+      }
+
+      .uweather {
+        background-image: url('https://i.ibb.co/NCtmwFy/uweather.jpg');
+      }
+
+      .starb {
+        background-image: url('https://i.ibb.co/cFPVtS8/starb.jpg');
+      }
+
+      .projects__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1em;
+        text-align: justify;
+        color: #212121;
+
+        h3 {
+          text-align: center;
+          font-size: 1.25rem;
+          font-weight: 800;
+        }
+
+        .info__btn {
+          background-color: transparent;
+          border: 1px solid #212121;
+          border-radius: 6px;
+          padding: .4em 1em;
+          color: #212121;
+          text-decoration: none;
+          font-size: 1rem;
+          font-weight: 600;
+          transition: all .2s ease-in-out;
+
+          &:hover {
+            background-color: #212121;
+            color: #f1f1f1;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* portfolio query */
+@media screen and (min-width: 900px) {
+  .portfolio {
+    position: relative;
+    top: -150px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .portfolio__info {
+      width: 500px;
+      font-size: 1.25rem;
+      margin-bottom: 2em;
+
+      h2 {
+        font-size: 2rem;
+      }
+    }
+
+    .portfolio__projects {
+      /* grid desktop */
+      grid-template-columns: 440px 440px;
+      grid-template-rows: 570px 570px;
+      gap: 2em;
+
+      .card {
+        .img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

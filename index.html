@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./public/favicon.png" type="image/x-icon">
+  <title>Santiago Montanaro | Frontend Developer</title>
+  <script src="https://kit.fontawesome.com/14ba000305.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./src/scss/index.css">
+</head>
+
+<body>
+  <!-- navs -->
+  <div id="home" class="nav">
+    <nav class="nav__navs">
+      <a href="#home"><img src="./src/img/Logo_white.svg" alt="santiago montanaro logo" title="Santiago Montanaro"></a>
+      <span id="btn" class="navs__btn"><i class="fa-solid fa-bars"></i></span>
+      <div id="navs__menu" class="hide-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="navs__desk">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <!-- header -->
+  <main class="header">
+    <div class="back-pic"></div>
+    <div class="profile-pic"></div>
+    <div class="profile-info">
+      <h3>Hi, I'm</h3>
+      <h1>Santiago Montanaro!</h1>
+      <h2 class="line-1 anim-typewriter">A Frontend Developer.</h2>
+    </div>
+    <div class="header-svg"></div>
+  </main>
+
+  <!-- about -->
+  <section id="about" class="about">
+    <div class="main">
+      <p class="greet">Hi! nice to meet you,
+        I'm Santiago :)</p>
+      <p><mark>I'm from Argentina, I'm 23 years old and I'm currently looking for an opportunity to work as a Frontend
+          Developer. I'm a self-taught developer, I started learning about web development in 2019 and currently I'm
+          studying at <a class="henry" href="https://www.soyhenry.com/" target="_blank">Soy Henry</a> to improve my
+          skills and learn new technologies.</mark></p>
+      <p><mark>I also have backend knowledge. I've worked with Node.js, Express.js and SQL. Especially with Node and
+          Express.</mark></p>
+      <p><mark>My main goal is to become a Fullstack Developer and I'm working hard to achieve it, and I'm sure I'll get
+          there soon.</mark></p>
+      <p><mark>In my free time I stay away from programming and I like making music, architectural renderings, playing
+          video games and enjoy the gaming world!</mark></p>
+    </div>
+    <div class="svg-socials"></div>
+    <div class="svg-data"></div>
+  </section>
+
+  <!-- skills -->
+  <section id="skills" class="skills">
+    <div class="skills__main">
+      <div class="front card">
+        <div class="front-svg"></div>
+        <span class="title"><mark>Frontend</mark></span>
+        <p>
+          I like to write clean and efficient code, I'm always looking for new ways to improve my skills. I also enjoy
+          designing and correcting even the smallest details and I'm always looking for new challenges. I'm currently
+          learning Redux and I'm looking forward to learn more about React Native.
+        </p>
+        <div class="lang">
+          <span>Languages that I use:</span>
+          <div class="lang__icons">
+            <i class="fab fa-html5"></i>
+            <i class="fab fa-css3-alt"></i>
+            <i class="fab fa-sass"></i>
+            <i class="fab fa-js-square js"></i>
+            <i class="fab fa-react"></i>
+          </div>
+        </div>
+      </div>
+      <div class="back  card">
+        <div class="back-svg"></div>
+        <span class="title"><mark>Backend</mark></span>
+        <p>
+          I'm still learning about backend, but I have certain knowledge about it. I've worked with Node.js, Express.js
+          and SQL. I consider myself good working with APIs. I'm always learning new things. Also I'm currently learning
+          about databases and SQL.
+        </p>
+        <div class="lang">
+          <span>Languages and tools that I use:</span>
+          <div class="lang__icons">
+            <i class="fab fa-node"></i>
+            <i class="fab fa-npm"></i>
+            <i class="fab fa-git-alt"></i>
+            <i class="fab fa-github"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- portfolio -->
+  <section id="portfolio" class="portfolio">
+    <div class="portfolio__info">
+      <h2>My latest projects</h2>
+      <p class="info__text">
+        Here you can see some of my latest projects. I'm always working on new projects and I'm always looking for new
+        challenges.
+      </p>
+      <a class="info__btn" href="https://github.com/santiagomontanaro?tab=repositories" target="_blank"><i
+          class="fab fa-github"></i> See more on GitHub</a>
+    </div>
+    <!-- projects -->
+    <div class="portfolio__projects">
+      <!-- gfact app -->
+      <div class="card">
+        <div class="img gfact"></div>
+        <div class="projects__info">
+          <h3><mark>GiFacts</mark></h3>
+          <p>
+            GiFacts it's and app that shows random facts about cats and then return a random gif about that fact (or
+            smth like)
+          </p>
+          <p>
+            Built with React, Node.js, Giphy API and Cat Facts API (I know, it's a weird combination)
+          </p>
+          <a class="info__btn" href="https://gfacts.vercel.app/" target="_blank">Don't believe me? Try it!</a>
+        </div>
+      </div>
+      <!-- rick n morty api -->
+      <div class="card">
+        <div class="img rnm"></div>
+        <div class="projects__info">
+          <h3><mark>Rick and Morty API</mark></h3>
+          <p>
+            A simple SPA that shows information about the characters of the Rick and Morty series and aditional info
+            about them (like their origin, location, etc).
+          <p>
+            Built with React, React Router Dom, Node.js, CSS Modules and the Rick and Morty API.
+          </p>
+          <a class="info__btn" href="https://rnmapi.vercel.app/" target="_blank">Don't believe me? Try it!</a>
+        </div>
+      </div>
+      <!-- uWeather app -->
+      <div class="card">
+        <div class="img uweather"></div>
+        <div class="projects__info">
+          <h3><mark>uWeather App</mark></h3>
+          <p>A simple app that shows the weather of the city you search. If you click on a city it will show you
+            additional info about it.</p>
+          <p>Built with React, React Router Dom, Node.js, CSS Modules (SASS), OpenWeather API, Pexels API and Font
+            Awesome</p>
+          <a class="info__btn" href="https://uweatherapp.vercel.app/" target="_blank">Don't believe me? Try it!</a>
+        </div>
+      </div>
+      <!-- starbuck landing page -->
+      <div class="card">
+        <div class="img starb"></div>
+        <div class="projects__info">
+          <h3><mark>Starbucks landing page</mark></h3>
+          <p>
+            This is a simple landing page of Starbucks. It's fully responsive and it's made with HTML, CSS and JS
+            vanilla.
+            It's also have dark mode and light mode.
+            It's only a template, it's not functional at all. But it's a good practice to improve my skills.
+          </p>
+          <p>
+            Built with HTML, CSS and JS vanilla.
+          </p>
+          <a class="info__btn" href="https://santiagomontanaro.github.io/starbucks-landing-switch-dark/#"
+            target="_blank">Don't believe me? Try it!</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <div id="contact" class="contact">
+    <h2>¿Interested?</h2>
+    <div class="contact__info">
+      <p>C'mon, don't be shy, contact me!</p>
+      <p>I have a lot to offer, but a lot to learn from you.</p>
+    </div>
+    <a href="mailto:santmon99@gmail.com" class="contact__btn">If you dont click this, I'll cry</a>
+  </div>
+  <!-- footer -->
+  <footer class="footer">
+    <a href="#home"><img class="footer__logo" src="./src/img/Logo_white.svg" alt=""></a>
+    <p>develop and evolve</p>
+    <div class="footer__socials">
+      <a href="https://www.linkedin.com/in/montsan/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/santiagomontanaro" target="_blank"><i class="fa-brands fa-github"></i></a>
+    </div>
+  </footer>
+  <p style="text-align: center; font-size: .9rem;">Made it with ❤️ by @Santiago Montanaro</p>
+
+  <div id="show-overlay"></div>
+  <script src=" ./src/script/toggle.js"></script>
+</body>
+
+</html>

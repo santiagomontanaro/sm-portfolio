@@ -1,0 +1,52 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3em;
+  min-height: 50vh;
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+
+  .footer__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+
+    a {
+      font-size: 2rem;
+      color: #F1F1F1;
+      transition: all 0.3s ease-in-out;
+      border: 1px solid #F1F1F1;
+      padding: 0.35em;
+      border-radius: 50%;
+      transition: all 0.3s ease-in-out;
+
+      .fa-linkedin-in,
+      .fa-github {
+        width: 35px;
+        height: 35px;
+      }
+
+      &:hover {
+        background-color: #F1F1F1;
+        color: #212121;
+      }
+    }
+  }
+}
+
+/* footer query */
+@media screen and (min-width: 900px) {
+  .footer {
+    a {
+      .footer__logo {
+        width: 160px;
+      }
+    }
+  }
+}

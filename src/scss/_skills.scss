@@ -1,0 +1,185 @@
+@mixin mark {
+  background-color: #ddda237e;
+  font-weight: 800;
+  color: #212121;
+  padding: .3em .8em;
+}
+
+.skills {
+  @include flex;
+  padding: 2em 1em;
+  color: #212121;
+
+  .skills__main {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  .front,
+  .back,
+  .hobbies {
+    @include flex;
+    background-color: #F1F1F1;
+    border-radius: 10px;
+    padding: 1.5em;
+  }
+
+  .front-svg {
+    background-image: url('../img/CSS.svg');
+  }
+
+  .back-svg {
+    background-image: url('../img/back.svg');
+  }
+
+  .hobbies-svg {
+    background-image: url('../img/VR_Flatline.svg');
+  }
+
+  .front-svg,
+  .back-svg,
+  .hobbies-svg {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    width: 260px;
+    height: 260px;
+    background-size: 120%;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+.card {
+  @include flex;
+  gap: 2em;
+  text-align: justify;
+  line-height: 1.4;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+  .lang {
+    @include flex;
+    gap: 2em;
+
+    span {
+      font-weight: 600;
+      border-bottom: 2px solid #212121;
+    }
+
+    .lang__icons {
+      text-align: center;
+      font-size: 3rem;
+
+      .fa-html5 {
+        color: #e34c26;
+      }
+
+      .fa-css3-alt {
+        color: #264de4;
+      }
+
+      .fa-sass {
+        color: #cc6699;
+      }
+
+      .js {
+        color: #f0db4f;
+      }
+
+      .fa-react {
+        color: #61dafb;
+      }
+
+      .fa-node {
+        color: #3c873a;
+      }
+
+      .fa-npm {
+        color: #cb3837;
+      }
+
+      .fa-git-alt {
+        color: #f14e32;
+      }
+
+      .fa-github {
+        color: #333;
+      }
+
+      .fa-html5:hover,
+      .fa-css3-alt:hover,
+      .fa-sass:hover,
+      .js:hover,
+      .fa-react:hover,
+      .fa-node:hover,
+      .fa-npm:hover,
+      .fa-git-alt:hover,
+      .fa-github:hover {
+        transform: scale(1.2);
+      }
+
+      .fa-html5,
+      .fa-css3-alt,
+      .fa-sass,
+      .js,
+      .fa-react,
+      .fa-node,
+      .fa-npm,
+      .fa-git-alt,
+      .fa-github {
+        transition: all 0.2s ease-in-out;
+      }
+    }
+  }
+
+  .title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+  }
+}
+
+/* media queries */
+@media (min-width: 970px) {
+  .skills {
+    position: relative;
+    top: -240px;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+
+    .skills__main {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      background-color: #F1F1F1;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+
+      .front,
+      .back,
+      .hobbies {
+        border-radius: 0;
+        box-shadow: none;
+        border-right: 1px solid #21212129;
+      }
+
+      .card {
+        justify-content: space-between;
+        width: 370px;
+        height: 710px;
+
+        .title {
+          font-size: 2rem;
+
+          mark {
+            @include mark;
+          }
+        }
+      }
+    }
+  }
+}

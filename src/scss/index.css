@@ -843,6 +843,9 @@ body {
   .footer a .footer__logo {
     width: 160px;
   }
+  .footer .footer__socials {
+    gap: 7em;
+  }
 }
 ::-webkit-scrollbar-track {
   border-radius: 10px;

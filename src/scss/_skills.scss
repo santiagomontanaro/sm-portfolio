@@ -2,18 +2,18 @@
   background-color: #ddda237e;
   font-weight: 800;
   color: #212121;
-  padding: .3em .8em;
+  padding: .1em .6em;
 }
 
 .skills {
   @include flex;
-  padding: 2em 1em;
+  padding: 4em 4em 2em 4em;
   color: #212121;
 
   .skills__main {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
   }
 
   .front,
@@ -137,6 +137,10 @@
     font-size: 1.5rem;
     font-weight: 800;
     text-align: center;
+
+    mark {
+      @include mark();
+    }
   }
 }
 

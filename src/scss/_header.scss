@@ -8,11 +8,10 @@ $heightCalc: 100vh;
   text-align: center;
 
   .back-pic {
-    background-image: url('https://i.ibb.co/K68d27w/profile-pic.jpg');
+    background-image: url('../img/profile.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    width: 100%;
+    min-width: 100%;
     opacity: .5;
     height: $heightCalc;
     position: absolute;

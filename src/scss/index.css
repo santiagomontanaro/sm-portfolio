@@ -172,7 +172,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 1em;
+  padding: 5px 1em;
   background-color: rgba(33, 33, 33, 0.8862745098);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
 }
@@ -188,7 +188,7 @@ body {
   background-color: rgba(33, 33, 33, 0.8862745098);
   position: absolute;
   right: 0;
-  top: 57px;
+  top: 47px;
   width: 200px;
   height: 345px;
   transition: all 0.2s ease-in-out;
@@ -222,7 +222,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6213px;
+  height: 6185px;
   background-color: #000;
   opacity: 0.5;
   z-index: 1;
@@ -266,11 +266,10 @@ body {
   /* Animacion */
 }
 .header .back-pic {
-  background-image: url("https://i.ibb.co/K68d27w/profile-pic.jpg");
+  background-image: url("../img/profile.jpg");
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  width: 100%;
+  min-width: 100%;
   opacity: 0.5;
   height: 100vh;
   position: absolute;
@@ -449,13 +448,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em 1em;
+  padding: 4em 4em 2em 4em;
   color: #212121;
 }
 .skills .skills__main {
   display: flex;
   flex-direction: column;
-  gap: 1em;
+  gap: 2em;
 }
 .skills .front,
 .skills .back,
@@ -569,6 +568,12 @@ body {
   font-weight: 800;
   text-align: center;
 }
+.card .title mark {
+  background-color: rgba(221, 218, 35, 0.4941176471);
+  font-weight: 800;
+  color: #212121;
+  padding: 0.1em 0.6em;
+}
 
 /* media queries */
 @media (min-width: 970px) {
@@ -608,48 +613,54 @@ body {
     background-color: rgba(221, 218, 35, 0.4941176471);
     font-weight: 800;
     color: #212121;
-    padding: 0.3em 0.8em;
+    padding: 0.1em 0.6em;
   }
 }
-.portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 1em;
-  gap: 2em;
-}
-.portfolio .portfolio__info {
+.portfolio__info {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   gap: 1em;
+  background-color: #F1F1F1;
+  color: #212121;
+  padding: 2rem;
+  margin: 2.5em 0;
+  text-align: center;
 }
-.portfolio .portfolio__info h2 {
+.portfolio__info h2 {
   text-align: center;
   font-size: 1.5rem;
   font-weight: 800;
 }
-.portfolio .portfolio__info .info__text {
+.portfolio__info .info__text {
   font-weight: 500;
   line-height: 1.5;
 }
-.portfolio .portfolio__info .info__btn {
+.portfolio__info .info__btn {
   background-color: transparent;
-  border: 1px solid #f1f1f1;
+  border: 1px solid #212121;
   border-radius: 6px;
   padding: 0.6em;
-  color: #f1f1f1;
+  color: #212121;
   text-decoration: none;
   font-size: 1.15rem;
 }
-.portfolio .portfolio__info .info__btn:hover {
+.portfolio__info .info__btn:hover {
+  background-color: #212121;
+  color: #f1f1f1;
+}
+.portfolio__info .info__btn:active {
   background-color: #f1f1f1;
   color: #000;
 }
-.portfolio .portfolio__info .info__btn:active {
-  background-color: #f1f1f1;
-  color: #000;
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2em;
+  margin-bottom: 2em;
+  gap: 2em;
 }
 .portfolio .portfolio__projects {
   /* mobile grid */
@@ -660,7 +671,8 @@ body {
 .portfolio .portfolio__projects .card {
   background-color: #f1f1f1;
   border-radius: 8px;
-  padding: 1.2em;
+  padding: 1.5em;
+  transition: all 0.2s ease-in-out;
 }
 .portfolio .portfolio__projects .card .img {
   background-size: cover;
@@ -669,23 +681,22 @@ body {
   height: 200px;
   width: 100%;
   border-radius: 8px;
-  transition: all 0.2s ease-in-out;
   border: 1px solid #212121;
 }
-.portfolio .portfolio__projects .card .img:hover {
-  transform: scale(1.05);
+.portfolio .portfolio__projects .card:hover {
+  transform: scale(1.02);
 }
 .portfolio .portfolio__projects .card .gfact {
-  background-image: url("https://i.ibb.co/9ydYyq3/g-facts-app.jpg");
+  background-image: url("../img/gfact-bgn.png");
 }
 .portfolio .portfolio__projects .card .rnm {
-  background-image: url("https://i.ibb.co/WgQT1VM/r-n-m-api.jpg");
+  background-image: url("../img/rnm-app.jpeg");
 }
 .portfolio .portfolio__projects .card .uweather {
-  background-image: url("https://i.ibb.co/NCtmwFy/uweather.jpg");
+  background-image: url("../img/uweather.png");
 }
 .portfolio .portfolio__projects .card .starb {
-  background-image: url("https://i.ibb.co/cFPVtS8/starb.jpg");
+  background-image: url("../img/starb.jpeg");
 }
 .portfolio .portfolio__projects .card .projects__info {
   display: flex;
@@ -718,9 +729,12 @@ body {
 
 /* portfolio query */
 @media screen and (min-width: 900px) {
+  .portfolio_main {
+    position: relative;
+    top: -245px;
+  }
   .portfolio {
     position: relative;
-    top: -150px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -753,16 +767,17 @@ body {
   background-color: #F1F1F1;
   color: #212121;
   padding: 2rem;
-  margin: 2em 0;
   text-align: center;
 }
 .contact h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 .contact .contact__info {
   font-size: 1rem;
   font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
 }
 .contact .contact__btn {
   background-color: transparent;
@@ -785,15 +800,17 @@ body {
 @media screen and (min-width: 900px) {
   .contact {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding: 2rem 4rem;
+    gap: 3em;
+    position: relative;
+    top: -245px;
   }
   .contact h2 {
     font-size: 2.6rem;
   }
   .contact .contact__info {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.5;
   }
   .contact .contact__btn {
@@ -807,7 +824,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 3em;
-  min-height: 50vh;
+  min-height: 40vh;
 }
 .footer p {
   font-size: 1.4rem;
@@ -817,19 +834,19 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 5.2em;
 }
 .footer .footer__socials a {
-  font-size: 2rem;
+  font-size: 1.2rem;
   color: #F1F1F1;
   transition: all 0.3s ease-in-out;
-  border: 1px solid #F1F1F1;
   padding: 0.35em;
-  border-radius: 50%;
+  border-radius: 5px;
   transition: all 0.3s ease-in-out;
 }
 .footer .footer__socials a .fa-linkedin-in,
-.footer .footer__socials a .fa-github {
+.footer .footer__socials a .fa-github,
+.footer .footer__socials a .fa-download {
   width: 35px;
   height: 35px;
 }
@@ -840,6 +857,10 @@ body {
 
 /* footer query */
 @media screen and (min-width: 900px) {
+  .footer {
+    position: relative;
+    top: -115px;
+  }
   .footer a .footer__logo {
     width: 160px;
   }

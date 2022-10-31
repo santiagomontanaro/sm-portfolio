@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   gap: 3em;
-  min-height: 50vh;
+  min-height: 40vh;
 
   p {
     font-size: 1.4rem;
@@ -15,19 +15,19 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2em;
+    gap: 5.2em;
 
     a {
-      font-size: 2rem;
+      font-size: 1.2rem;
       color: #F1F1F1;
       transition: all 0.3s ease-in-out;
-      border: 1px solid #F1F1F1;
       padding: 0.35em;
-      border-radius: 50%;
+      border-radius: 5px;
       transition: all 0.3s ease-in-out;
 
       .fa-linkedin-in,
-      .fa-github {
+      .fa-github,
+      .fa-download {
         width: 35px;
         height: 35px;
       }
@@ -43,6 +43,9 @@
 /* footer query */
 @media screen and (min-width: 900px) {
   .footer {
+    position: relative;
+    top: -115px;
+
     a {
       .footer__logo {
         width: 160px;

@@ -5,13 +5,13 @@
 
   .nav__navs {
     position: fixed;
-    width: calc(100% - 32px);
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 5px 1em;
-    background-color: #212121e2;
+    background-color: #212121d0;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
 
     img {
@@ -23,11 +23,11 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      gap: 2.2em;
+      gap: 1.8em;
       background-color: #212121e2;
       position: absolute;
       right: 0;
-      top: 47px;
+      top: 52px;
       width: 200px;
       height: 345px;
       transition: all 0.2s ease-in-out;
@@ -68,7 +68,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 6185px;
+  height: 6567px;
   background-color: #000;
   opacity: 0.5;
   z-index: 1;
@@ -85,7 +85,7 @@
 
       .navs__desk {
         display: block;
-
+        
         ul {
           display: flex;
           flex-direction: row;
@@ -94,6 +94,7 @@
           gap: 2em;
           padding-right: 1em;
           font-weight: 500;
+          list-style: none;
         }
 
         a {

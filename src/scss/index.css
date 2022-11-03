@@ -1,153 +1,8 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-/* unselectable text */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap");
 * {
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Safari */
-  /* Konqueror HTML */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                        supported by Chrome and Opera */
-}
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -167,13 +22,13 @@ body {
 }
 .nav .nav__navs {
   position: fixed;
-  width: calc(100% - 32px);
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 5px 1em;
-  background-color: rgba(33, 33, 33, 0.8862745098);
+  background-color: rgba(33, 33, 33, 0.8156862745);
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.6);
 }
 .nav .nav__navs img {
@@ -184,11 +39,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2.2em;
+  gap: 1.8em;
   background-color: rgba(33, 33, 33, 0.8862745098);
   position: absolute;
   right: 0;
-  top: 47px;
+  top: 52px;
   width: 200px;
   height: 345px;
   transition: all 0.2s ease-in-out;
@@ -222,7 +77,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 6185px;
+  height: 6567px;
   background-color: #000;
   opacity: 0.5;
   z-index: 1;
@@ -245,6 +100,7 @@ body {
     gap: 2em;
     padding-right: 1em;
     font-weight: 500;
+    list-style: none;
   }
   .nav .nav__navs .navs__desk a {
     color: #F1F1F1;
@@ -287,11 +143,6 @@ body {
   color: #F1F1F1;
 }
 .header .profile-info h2 {
-  font-size: 2em;
-  font-weight: 600;
-  color: #FFFFFF;
-}
-.header .profile-info h3 {
   font-size: 1.5em;
   font-weight: 600;
   color: #FFFFFF;
@@ -321,7 +172,7 @@ body {
     width: 0;
   }
   to {
-    width: 11em;
+    width: 12em;
   }
 }
 @keyframes typewriter {
@@ -329,7 +180,7 @@ body {
     width: 0;
   }
   to {
-    width: 11em;
+    width: 12em;
   }
 }
 @-webkit-keyframes blinkTextCursor {
@@ -504,7 +355,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2em;
+  gap: 1em;
 }
 .card .lang span {
   font-weight: 600;
@@ -513,6 +364,8 @@ body {
 .card .lang .lang__icons {
   text-align: center;
   font-size: 3rem;
+  display: flex;
+  gap: 10px;
 }
 .card .lang .lang__icons .fa-html5 {
   color: #e34c26;
@@ -550,7 +403,7 @@ body {
 .card .lang .lang__icons .fa-npm:hover,
 .card .lang .lang__icons .fa-git-alt:hover,
 .card .lang .lang__icons .fa-github:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .card .lang .lang__icons .fa-html5,
 .card .lang .lang__icons .fa-css3-alt,
@@ -645,6 +498,9 @@ body {
   color: #212121;
   text-decoration: none;
   font-size: 1.15rem;
+}
+.portfolio__info .info__btn .fa-github {
+  margin-right: 0.2rem;
 }
 .portfolio__info .info__btn:hover {
   background-color: #212121;

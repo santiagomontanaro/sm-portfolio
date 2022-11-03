@@ -60,7 +60,7 @@
 
   .lang {
     @include flex;
-    gap: 2em;
+    gap: 1em;
 
     span {
       font-weight: 600;
@@ -70,6 +70,8 @@
     .lang__icons {
       text-align: center;
       font-size: 3rem;
+      display: flex;
+      gap: 10px;
 
       .fa-html5 {
         color: #e34c26;
@@ -116,7 +118,7 @@
       .fa-npm:hover,
       .fa-git-alt:hover,
       .fa-github:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
       }
 
       .fa-html5,
